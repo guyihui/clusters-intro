@@ -199,7 +199,7 @@ Kubernetes](https://storage.googleapis.com/pub-tools-public-publication-data/pdf
 
         * 应用部署：亲和、互斥、独占、P0M0
         * 其他策略：资源需求，容器创建特殊需求，IP隔离需求
-        * CPU精细调节：CPUSet独占、均衡、SameCore等策略
+        * CPU 精细调节：CPUSet 独占、均衡、SameCore等策略
 
 2. Sigma 和 Fuxi 混布架构
 
