@@ -26,7 +26,7 @@ public class ProducerDemo {
             producer = new KafkaProducer<String, String>(properties);
             for (int i = 0; i < 100; i++) {
                 String msg = "Message " + i;
-                producer.send(new ProducerRecord<String, String>("HelloWorld", msg));
+                producer.send(new ProducerRecord<String, String>("test", msg));
                 System.out.println("Sent:" + msg);
             }
         } catch (Exception e) {
