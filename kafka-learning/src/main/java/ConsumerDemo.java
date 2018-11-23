@@ -8,7 +8,7 @@ import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 public class ConsumerDemo {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         Properties properties = new Properties();
         properties.put("bootstrap.servers", "127.0.0.1:9092");//这里改自己的IP
         properties.put("group.id", "group-1");
@@ -24,6 +24,7 @@ public class ConsumerDemo {
         while (true) {
             ConsumerRecords<String, String> records = kafkaConsumer.poll(100);
             for (ConsumerRecord<String, String> record : records) {
+                Thread.currentThread().sleep(1000);//simulate processing
                 System.out.printf("offset = %d, value = %s", record.offset(), record.value());
                 System.out.println();
             }
