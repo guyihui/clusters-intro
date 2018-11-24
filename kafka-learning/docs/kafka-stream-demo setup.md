@@ -1,4 +1,4 @@
-# kafka-steam-demo setup
+# kafka-stream-demo setup
 这个demo是 Apache kafka提供的wordcount 的demo，统计topic streams-plaintext-input中的单词个数，并输出到topic streams-wordcount-output中
 ## Setup preparation
 
