@@ -1,0 +1,37 @@
+---
+ 
+apiVersion: extensions/v1beta1
+ 
+kind: Deployment
+ 
+metadata:
+ 
+  name: deployment-mysql
+ 
+spec:
+ 
+  replicas: 1
+ 
+  template:
+ 
+    metadata:
+ 
+      labels:
+ 
+        pod: mysql-pod
+ 
+    spec:
+ 
+      containers:
+ 
+        - name: test-mysql
+ 
+          image: cs59142213sc1/try_kubernetes:mysql
+
+          # env:
+          #   - name: MYSQL_ROOT_PASSWORD
+          #     value: "123456"
+ 
+          ports:
+ 
+            - containerPort: 3306

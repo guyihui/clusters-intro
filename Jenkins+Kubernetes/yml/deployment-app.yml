@@ -1,0 +1,22 @@
+---
+ 
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deployment-app
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      # hostAliases:
+      #   - ip: ""
+      #     hostnames:
+      #     - ""
+      containers:
+        - name: test-app
+          image: cs59142213sc1/try_kubernetes:app
+          ports:
+            - containerPort: 8080
